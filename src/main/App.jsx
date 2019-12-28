@@ -1,21 +1,17 @@
 //import './App.css'
 import React from 'react'
 import '../components/css/Landing.css'
-import Logo from '../components/template/Logo'
-import Nav from '../components/template/Nav'
-import Main from '../components/template/Main'
-import Footer from '../components/template/Footer'
+import Home from '../components/views/Home'
+import Pagina from '../components/views/Pagina'; 
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 export default props=>
    
-      <div id="landing" className="app" >
-         <div className="container">
-
-            <Logo />
-            <Nav />
-            <Main />
-            <Footer />
-         </div>
-
-      </div>
+   <BrowserRouter>
+      <Switch>
+         <Route path="/" component={Home} exact />
+         <Route path="/pagina" component={Pagina} />
+         <Route component={() => <div>pagina</div>} />
+      </Switch>
+   </BrowserRouter>
   

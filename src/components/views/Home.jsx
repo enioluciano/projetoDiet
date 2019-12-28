@@ -14,6 +14,7 @@ export default props=>
             <Nav />
             <Main />
             <Footer />
+            
          </div>
 
       </div>
